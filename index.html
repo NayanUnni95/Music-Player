@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/cute-clipart/64/apple-music.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container displayFlex">
+      <div class="bgBlur"></div>
+      <section class="innerWindow displayFlex">
+        <div class="musicSection displayFlex">
+          <div class="musicDetails displayFlex">
+            <div>
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e029fb7e62f04f67228f9fd194a"
+                alt=""
+              />
+            </div>
+            <h2>on & on</h2>
+          </div>
+          <div class="controls displayFlex">
+            <audio>
+              <source
+                src="https://aac.saavncdn.com/909/f7f99cf9a259912ed27ee32c02ae9c5d_320.mp4"
+                type="video/mp4"
+              />
+            </audio>
+            <div class="bar">
+              <input type="range" value="0" id="progressBar" />
+            </div>
+            <div class="controlBtn">
+              <!-- <button id="prevBtn">prev</button> -->
+              <button id="ctrlBtn" class="displayFlex">
+                <svg
+                  fill="WindowText"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M8 5v14l11-7z" />
+                  <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+              </button>
+              <!-- <button id="nextBtn">next</button> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
