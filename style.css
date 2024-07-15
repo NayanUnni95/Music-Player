@@ -44,7 +44,7 @@ html {
   flex-direction: column;
 }
 .bar {
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 100%;
 }
 .bar input {
@@ -67,6 +67,26 @@ html {
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
+}
+.select {
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  background: unset;
+  text-transform: capitalize;
+  color: black;
+  background-color: rgba(128, 128, 128, 0.48);
+}
+.select:hover {
+  color: white;
+}
+.audioSelect {
+  display: flex;
+  flex-direction: column;
+}
+.audioSelect label {
+  font-size: smaller;
+  margin: 0.5rem;
 }
 #volumeBar {
   display: none;

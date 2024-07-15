@@ -6,7 +6,7 @@
     <title>Music Player</title>
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <script src="app.js"></script>
-    <link rel="manifest" href="./manifest.json">
+    <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,6 +30,16 @@
               <input type="range" value="0" id="progressBar" />
               <div class="songLabel">
                 <div><label id="currentValue"></label></div>
+                <div class="audioSelect">
+                  <select class="select" id="audioQuality">
+                    <option disabled>Song Quality</option>
+                    <option value="0">low</option>
+                    <option value="1">medium</option>
+                    <option value="2" selected>best</option>
+                    <option value="3">high</option>
+                    <option value="4">ultra high</option>
+                  </select>
+                </div>
                 <div><label id="maxValue"></label></div>
               </div>
             </div>
