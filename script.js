@@ -51,6 +51,9 @@ function updateProgressMax() {
 audio.ontimeupdate = () => {
   progress.value = audio.currentTime;
   currentVAlue.innerText = updateTime(progress.value);
+  if (progress.value == Math.trunc(audio.duration)) {
+    nextSong();
+  }
 };
 
 const updateTime = (currentTime) => {
