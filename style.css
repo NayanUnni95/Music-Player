@@ -63,6 +63,14 @@ html {
   border: solid 2px white;
   border-radius: 50%;
 }
+.songLabel {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+#volumeBar {
+  display: none;
+}
 img {
   border-radius: 0.5rem;
   width: 90%;

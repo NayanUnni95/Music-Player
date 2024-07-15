@@ -6,10 +6,16 @@ const image = document.getElementsByTagName("img")[0];
 const container = document.getElementById("bgImg");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
+const volumeBar = document.getElementById("volumeBar");
+const volumeBtn = document.getElementById("volumeBtn");
+const currentVAlue = document.getElementById("currentValue");
+const maxVAlue = document.getElementById("maxValue");
 
 audio.onloadedmetadata = function () {
   updateProgressMax();
+  maxVAlue.innerText = updateTime(audio.duration);
   progress.value = audio.currentTime;
+  volumeBar.value = audio.volume * 10;
 };
 
 ctrlBtn.addEventListener("click", () => clearBtnState());
@@ -44,6 +50,13 @@ function updateProgressMax() {
 
 audio.ontimeupdate = () => {
   progress.value = audio.currentTime;
+  currentVAlue.innerText = updateTime(progress.value);
+};
+
+const updateTime = (currentTime) => {
+  let sec = Math.floor(currentTime % 60);
+  let min = Math.floor(currentTime / 60);
+  return `${min} : ${sec}`;
 };
 
 progress.onchange = () => {
@@ -109,4 +122,15 @@ prevBtn.addEventListener("click", () => {
 
 nextBtn.addEventListener("click", () => {
   nextSong();
+});
+
+volumeBar.onchange = () => {
+  audio.volume = volumeBar.value / 10;
+};
+
+volumeBtn.addEventListener("click", () => {
+  volumeBar.style.display = "block";
+  setTimeout(() => {
+    volumeBar.style.display = "none";
+  }, 3000);
 });
