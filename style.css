@@ -51,15 +51,16 @@ html {
   appearance: none;
   -webkit-appearance: none;
   width: 100%;
-  background-color: rgb(30, 42, 53);
+  background-color: rgba(185, 185, 185, 0.719);
   border-radius: 0.5rem;
   height: 6px;
 }
 .bar input::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-color: black;
+  border: solid 2px white;
   border-radius: 50%;
 }
 img {

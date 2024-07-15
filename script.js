@@ -20,7 +20,7 @@ const clearBtnState = () => {
     document.getElementById(
       "ctrlIcon"
     ).innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>`;
-  } else {
+  } else if (audio.played) {
     pause();
     document.getElementById("ctrlIcon").innerHTML = `<path d="M8 5v14l11-7z"/>`;
   }
@@ -76,7 +76,6 @@ const updateContent = (source) => {
   document.title = title.innerText = songQueue[source].name;
   image.src = songQueue[source].images[1].url;
   container.style.backgroundImage = `url(${songQueue[source].images[1].url})`;
-  clearBtnState();
 };
 
 (async function () {
@@ -87,17 +86,21 @@ const updateContent = (source) => {
   .catch((err) => console.log(err));
 
 const nextSong = () => {
-  if (currentSongIndex <= songQueue.length - 1) {
-    currentSongIndex++;
-    updateContent(currentSongIndex);
+  if (currentSongIndex < songQueue.length - 1) {
+    updateContent(++currentSongIndex);
+  } else if (currentSongIndex == songQueue.length - 1) {
+    updateContent((currentSongIndex = 0));
   }
+  clearBtnState();
 };
 
 const prevSong = () => {
-  if (currentSongIndex >= 0) {
-    currentSongIndex--;
-    updateContent(currentSongIndex);
+  if (currentSongIndex > 0) {
+    updateContent(--currentSongIndex);
+  } else if (currentSongIndex == 0) {
+    updateContent((currentSongIndex = songQueue.length - 1));
   }
+  clearBtnState();
 };
 
 prevBtn.addEventListener("click", () => {
