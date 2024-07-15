@@ -6,44 +6,33 @@
     <title>Music Player</title>
     <link
       rel="shortcut icon"
-      href="https://img.icons8.com/cute-clipart/64/apple-music.png"
+      href="/images/music-player64x64.ico"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <div class="container displayFlex">
+    <div class="container displayFlex" id="bgImg">
       <div class="bgBlur"></div>
       <section class="innerWindow displayFlex">
         <div class="musicSection displayFlex">
           <div class="musicDetails displayFlex">
-            <div>
-              <img
-                src="https://i.scdn.co/image/ab67616d00001e029fb7e62f04f67228f9fd194a"
-                alt=""
-              />
+            <div class="songImg">
+              <img src="" alt="" />
             </div>
-            <h2>Ballaatha jaathi</h2>
+            <h2 id="songTitle"></h2>
           </div>
           <div class="controls displayFlex">
             <audio>
-              <source
-                src="https://aac.saavncdn.com/909/f7f99cf9a259912ed27ee32c02ae9c5d_320.mp4"
-                type="video/mp4"
-              />
+              <source src="" type="video/mp4" />
             </audio>
             <div class="bar">
               <input type="range" value="0" id="progressBar" />
             </div>
-            <div class="controlBtn">
-              <!-- <button id="prevBtn">prev</button> -->
-              <button id="ctrlBtn" class="displayFlex">
+            <div class="controlBtn displayFlex">
+              <button id="prevBtn" class="displayFlex">
                 <svg
                   fill="WindowText"
                   height="24"
@@ -51,11 +40,39 @@
                   width="24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    fill-rule="evenodd"
+                    d="M18.4265377,4.18076808 L8.42653766,11.1807681 C7.85782078,11.5788699 7.85782078,12.4211301 8.42653766,12.8192319 L18.4265377,19.8192319 C19.0893151,20.2831762 20,19.809023 20,19 L20,5 C20,4.19097699 19.0893151,3.71682385 18.4265377,4.18076808 Z M5,4 C4.44771525,4 4,4.44771525 4,5 L4,19 C4,19.5522847 4.44771525,20 5,20 C5.55228475,20 6,19.5522847 6,19 L6,5 C6,4.44771525 5.55228475,4 5,4 Z M18,6.92065556 L18,17.0793444 L10.7437937,12 L18,6.92065556 Z"
+                  />
+                </svg>
+              </button>
+              <button id="ctrlBtn" class="displayFlex">
+                <svg
+                  fill="WindowText"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="ctrlIcon"
+                >
                   <path d="M8 5v14l11-7z" />
                   <path d="M0 0h24v24H0z" fill="none" />
                 </svg>
               </button>
-              <!-- <button id="nextBtn">next</button> -->
+              <button id="nextBtn" class="displayFlex">
+                <svg
+                  fill="WindowText"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.57346234,4.18076808 L15.5734623,11.1807681 C16.1421792,11.5788699 16.1421792,12.4211301 15.5734623,12.8192319 L5.57346234,19.8192319 C4.91068487,20.2831762 4,19.809023 4,19 L4,5 C4,4.19097699 4.91068487,3.71682385 5.57346234,4.18076808 Z M19,4 C19.5522847,4 20,4.44771525 20,5 L20,19 C20,19.5522847 19.5522847,20 19,20 C18.4477153,20 18,19.5522847 18,19 L18,5 C18,4.44771525 18.4477153,4 19,4 Z M6,6.92065556 L6,17.0793444 L13.2562063,12 L6,6.92065556 Z"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

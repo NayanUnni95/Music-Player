@@ -20,7 +20,6 @@ html {
 .container {
   width: 100vw;
   height: 100dvh;
-  background-image: url(https://i.scdn.co/image/ab67616d00001e029fb7e62f04f67228f9fd194a);
   background-size: cover;
   position: relative;
 }
@@ -37,6 +36,9 @@ html {
   padding: 1rem;
   flex-direction: column;
 }
+.songImg {
+  display: contents;
+}
 .controls {
   width: 100%;
   flex-direction: column;
@@ -46,6 +48,7 @@ html {
   width: 100%;
 }
 .bar input {
+  appearance: none;
   -webkit-appearance: none;
   width: 100%;
   background-color: rgb(30, 42, 53);
@@ -61,6 +64,8 @@ html {
 }
 img {
   border-radius: 0.5rem;
+  width: 90%;
+  height: 90%;
 }
 h2 {
   margin: 1rem;
@@ -71,6 +76,7 @@ button {
   padding: 1rem;
   border-radius: 50%;
   border: 0;
+  margin: 1rem;
 }
 @media only screen and (max-width: 425px) {
   .innerWindow {
